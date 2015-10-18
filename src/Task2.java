@@ -61,6 +61,7 @@ class PositionSearcher {
         }
 
         while(true) {
+            queue.remove();
             addNextDigitToQueue();
             position = position.add(BigInteger.ONE);
 
@@ -75,7 +76,6 @@ class PositionSearcher {
      * Добавляет следующую цифру текущего числа в очередь
      */
     private void addNextDigitToQueue() {
-        queue.remove();
 
         int numberLength = currentNumber.toString().length();
 
